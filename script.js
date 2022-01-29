@@ -1,9 +1,9 @@
 let title ="JavaScript";
 let screens ="Простые, Сложные, Интерактивные";
-let screenPrice ="17";
-let rollback ="29";
-let fullPrice ="40000";
-let adaptive ="true";
+let screenPrice = 17;
+let rollback = 29;
+let fullPrice = 40000;
+let adaptive = true;
 
 console.log(typeof title);
 console.log(screens.length);
