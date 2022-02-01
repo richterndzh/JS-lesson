@@ -11,23 +11,18 @@ let fullPrice =  Number(screenPrice) + Number(servicePrice1) + Number(servicePri
 let servicePercentPrice = Number(fullPrice) - Number(rollback/100);
 
 
-console.log(title);
-console.log(screens);
-console.log(screenPrice);
-console.log(adaptive);
-console.log(service1);
-console.log(servicePrice1);
-console.log(service2);
-console.log(servicePrice2);
-console.log(fullPrice);
-console.log(Math.ceil(servicePercentPrice));
+console.log(typeof title);
+console.log(typeof screenPrice);
+console.log(typeof adaptive);
+console.log(typeof fullPrice);
+console.log(screens.length);
 
 if (fullPrice > 30000) {
   console.log("Даем скидку в 10%");
 } else if (fullPrice >= 15000 && fullPrice <= 30000) {
   console.log("Даем скидку в 5%");
-} else if (fullPrice == 0){
-  console.log("Скидка не предусмотрена");
+} else if (fullPrice < 15000 && fullPrice >= 0) {
+  console.log("Скидка не предусмотрена.");
 } else if (fullPrice < 0) {
   console.log("Что-то пошло не так!");
 }
