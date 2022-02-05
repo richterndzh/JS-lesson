@@ -1,7 +1,7 @@
 let title = prompt('Как называется ваш проект?');
 let screens = prompt('Какие типы экранов нужно разработать?');
 let screenPrice = Number(prompt('Сколько будет стоить данная работа?'));
-let rollback = 500; 
+let rollback = 50; 
 let adaptive = confirm('Нужен ли адаптив на сайте?');
 let service1 = prompt('Какой дополнительный тип услуги нужен?');
 let servicePrice1 = Number(prompt('Сколько это будет стоить?'));
@@ -34,8 +34,8 @@ function getFullPrice(priceOfWork, allServicePrices) {
 }
 let fullPrice = getFullPrice(screenPrice, allServicePrices);
 
-const getServicePercentPrices =function(fullPrice, rollback) {
-  return fullPrice - rollback/100;
+const getServicePercentPrices = function(fullPrice, rollback) {
+  return fullPrice - (fullPrice * (rollback / 100));
 };
 let servicePercentPrice = getServicePercentPrices(fullPrice, rollback);
 
